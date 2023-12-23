@@ -1,0 +1,71 @@
+<html>
+    <head>Arrays concept
+        </head>
+        <body>
+            <p id="array">
+                </p>
+            </body>
+            <script>
+                let car=["bmw","volvo","sonax"];
+                document.getElementById("array").innerHTML=car;
+               
+
+                let bmw=car[0];
+                document.getElementById("array").innerHTML=bmw;
+
+                let len=car.length;
+                document.getElementById("array").innerHTML=len;
+
+                let lastelement=car[car.length-1];
+                document.getElementById("array").innerHTML=lastelement;
+
+                car.forEach((item,index,Array)=>console.log(index,item));
+
+                document.getElementById("array").innerHTML=car.toString();
+
+                popmethod=car.pop();
+                document.getElementById("array").innerHTML=car;
+                
+
+                pushmethod=car.push("Audi","saje");
+                document.getElementById("array").innerHTML=car;
+
+                car.shift();
+                document.getElementById("array").innerHTML=car;
+
+                car.unshift("car");
+                document.getElementById("array").innerHTML=car;
+
+                let bike=["honda","suzuki","royal enfield"];
+                let vehicle=car.concat(bike);
+                document.getElementById("array").innerHTML=vehicle;
+
+                vehicle.sort();
+                document.getElementById("array").innerHTML=vehicle;
+
+                vehicle.reverse();
+                document.getElementById("array").innerHTML=vehicle;
+
+                let num1=[1,2,3,4];
+                let num2=num1.map(multiply);
+                function multiply(value)
+                {
+                    return value*2;
+                }
+                document.getElementById("array").innerHTML=num2;
+
+                let num3=num1.filter(greater);
+                function greater(value)
+                {
+                    return value>2;
+                }
+                document.getElementById("array").innerHTML=num3;
+
+                let num4=num1.reduce(sum);
+                function sum(total,value){
+                    return total+value;
+                }
+                document.getElementById("array").innerHTML=num4;
+            
+</script>
+</html>
