@@ -1,0 +1,31 @@
+<html>
+    <head>
+        Javascript Objects
+    </head>
+    <body>
+        <p id="demo"></p>
+            <button id="click_me">Click me</button>
+        </body>
+        <script>
+            var student={
+                name:"sivaranjani",
+                age:24,
+                Character:"Good",
+                color:"",
+                get quality(){
+                    return this.Character
+                },
+                set clr(color1){
+                    this.color=color1
+                },
+            };
+            function mw(){
+                alert("Hi"+student.Character)
+            }
+            student.clr="White";
+            document.getElementById("click_me").onclick=mw;
+            document.getElementById("demo").innerHTML=student.quality;
+            document.getElementById("demo").innerHTML=student.color;
+
+            </script>
+</html>

@@ -1,0 +1,32 @@
+<html>
+    <head>
+        Javascript Objects
+    </head>
+    <body>
+        <p id="demo">
+        </body>
+        <script>
+            var student={
+                name:"Sivaranjani",
+                Age:25,
+                Company:"Lumel",
+            };
+            document.getElementById("demo").innerHTML=student.name+" Age is "+student.Age+" Company is "+student.Company;
+            </script>
+            <script>
+                var student=new Object();
+                student.name="sivaranjani";
+                student.age=25;
+                student.Company="LUMEL";
+                document.getElementById("demo").innerHTML=student.name+"Age is"+student.age+"company is"+student.Company;
+                </script>
+                <script>
+                    function stud(name,age,company){
+                        this.name=name;
+                        this.age=age;
+                        this.company=company;
+                    }
+                    var student= new stud("Siva Ranjani",26,"Lumel");
+                    document.getElementById("demo").innerHTML=student.name +"Age is "+student.age +" Company is "+ student.company;
+                    </script>
+</html>
