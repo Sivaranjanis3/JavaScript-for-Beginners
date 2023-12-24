@@ -1,0 +1,44 @@
+<html>
+    <head>Looping concepts
+        </head>
+        <body>
+            <p id="demo">
+            <h1>Loop concept
+                </h1>
+                <script>
+                    let i;
+                    for(i=0;i<5;i++)
+                    {
+                        console.log(i);
+                        document.getElementById("demo").innerHTML=i;
+                    }
+                    
+
+                    let x=1;
+                    while(x<5)
+                    {
+                        console.log(x);
+                        x++;
+                        if(x==3)
+                        break
+                    }
+
+                    let y=5;
+                    do
+                    {
+                        console.log(y);
+                        y++
+                    }
+                    while(y<10)
+
+                    let z;
+                    for(z=1;z<5;z++)
+                    {
+                        if(z==3){
+                            continue;
+                        }
+                        console.log(z);
+                    }
+                    </script>
+            </body>
+    </html>
