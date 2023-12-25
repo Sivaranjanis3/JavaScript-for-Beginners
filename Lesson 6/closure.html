@@ -1,0 +1,30 @@
+<html>
+    <head> Javascript function</head>
+    <body>
+        <p id="demo"></p>
+     </body>
+     <script>
+        let a=10
+        function cal()
+        {
+            let b=3
+            document.write(a+b)
+        }
+        cal()
+        </script>
+
+        <script>
+            let x=10
+            function first_func(){
+                let y=20
+                function second_func(){
+                    let z=30
+                    result1=x+y+z
+                    return result1
+                }
+                return second_func()
+            }
+            let result=first_func()
+            document.write("Result is "+result)
+            </script>
+</html>
