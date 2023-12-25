@@ -1,0 +1,70 @@
+<html>
+    <head> Javascript function</head>
+    <body>
+        <p id="demo"></p>
+            <button id="click_me">Click me</button>
+        </body>
+        <script>
+            function square(value){
+                document.getElementById("demo").innerHTML=value*value;
+            }
+            square(5)
+            </script>
+
+            <script>
+                let x=function message(){
+                    alert("Hi");
+                }
+                let y=x
+                document.getElementById("demo").innerHTML=y();
+                document.getElementById("click_me").onclick=x;
+                </script>
+
+                <script>
+                    var samplefunction=new Function("a","b","return a+b");
+                    var z=samplefunction(1,2)
+                    document.getElementById("demo").innerHTML=z;
+
+                    </script>
+
+                    <script>
+                        (function hello(){
+                            alert("Hello Welcome")
+                        })()
+                        </script>
+
+                        <script>
+                            function sum(a,b){
+                                return a*b;
+                            }
+                            let c=sum(2,3)*12;
+                            document.getElementById("demo").innerHTML=c;
+                            </script>
+                            <script>
+                                var body="return math.PI*rad*rad"
+                                var circle=new Function("rad",body);
+                                alert(circle(5))
+                                </script>
+
+                                <script>
+                                    let myfunc=(a,b,c)=>{return a*b*c}
+                                    let mul=myfunc(2,4,5)
+                                    document.getElementById("demo").innerHTML=mul
+                                    </script>
+
+                                    <script>
+                                        function* functiongenerate()
+                                        {
+                                            yield 1;
+                                            yield 2;
+                                            return 3;
+                                        }
+                                        var product=functiongenerate();
+                                        let one=product.next();
+                                        let two=product.next();
+                                        let three=product.next();
+                                        alert(JSON.stringify(one))
+                                        alert(JSON.stringify(two))
+                                        alert(JSON.stringify(three))
+                                        </script>
+ </html>
