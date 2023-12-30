@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Form validation</title>
+        <script type="text/javascript">
+            function validate(){
+                var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+                if(document.myform.email.value==""){
+                    alert("Enter the email id")
+                    
+                    document.myform.email.focus()
+                    return false
+                }
+                else if(document.myform.password.value==""){
+                    alert("Enter the password")
+                    document.myform.password.focus()
+                    return false
+                }else{
+                    
+                    return true
+                } 
+            }
+            </script>
+    </head>
+    <body>
+        <form action="welcome.html" name="myform" onsubmit="return(validate());">
+        <input name=email placeholder="Mail ID" type="text"/><br>
+        <input name=password placeholder="Password" type="text"/>  <br>
+        <button type="submit"> Submit </button>
+        </form>
+        </body>
+    </html>
