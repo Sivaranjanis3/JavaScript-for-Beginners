@@ -1,0 +1,30 @@
+<html>
+    <head>This concept</head>
+    <body>
+        </body>
+        <script>
+            var value=100
+            function sum(){
+                var value=50
+                alert("Value"+value)
+                alert("This value"+this.value)
+            }
+            sum()
+            </script>
+            <script>
+                var person={
+                    name: "Siva Ranjani knows ",
+                    language:["C","C++","Java" ,"Java Script"],
+                    fet(){
+                        console.log("The person name is "+this.name)
+                    },
+                    second_try(){
+                       this.language.forEach(function(tag){
+                        console.log(this.name,tag)
+                       },this)
+                    }
+                }
+                person.fet()
+                person.second_try()
+                </script>
+    </html>
