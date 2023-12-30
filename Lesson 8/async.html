@@ -1,0 +1,46 @@
+<html>
+    <head>Async and await concept</head>
+    <body>
+        </body>
+        <script>
+            let result=function(score){
+                return new Promise(function(resolve,reject){
+                    console.log("Calculating result ...")
+                    if(score>50)
+                    resolve("Congradulation. You have passed")
+                else
+                reject("Sorry better luck next time")
+                })
+            }
+
+            let grade=function(response){
+                return new Promise(function(resolve,reject){
+                    console.log("Calculating grade...")
+                    resolve(response+ "Your grade is A")
+                })
+                
+            }
+
+            // result(80).then(response=>{
+            //     return grade(response)
+            // }).then(finalgrade1=>{
+            //     console.log(finalgrade1)
+            // }).catch(err=>{
+            //     console.log(err)
+            // })
+
+            async function calculateresult(){
+                try{
+                    const response=await result(80)
+                    console.log("Result received")
+                const finalgrade=await grade(response)
+                console.log(finalgrade)
+                }
+                catch(err){
+                    console.log(err)
+                }
+            }
+            calculateresult()
+        
+            </script>
+    </html>
